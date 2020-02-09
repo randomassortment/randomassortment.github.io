@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://randomassortment.github.io</id>
     <title>Gridea</title>
-    <updated>2020-02-03T08:21:34.728Z</updated>
+    <updated>2020-02-09T12:10:13.863Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://randomassortment.github.io"/>
     <link rel="self" href="https://randomassortment.github.io/atom.xml"/>
@@ -10,6 +10,28 @@
     <logo>https://randomassortment.github.io/images/avatar.png</logo>
     <icon>https://randomassortment.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, Gridea</rights>
+    <entry>
+        <title type="html"><![CDATA[turtle的用法]]></title>
+        <id>https://randomassortment.github.io/post/turtle-de-yong-fa</id>
+        <link href="https://randomassortment.github.io/post/turtle-de-yong-fa">
+        </link>
+        <updated>2020-02-09T12:01:22.000Z</updated>
+        <content type="html"><![CDATA[<p>turtle 能执行什么操作？<br>
+如果你有一个叫做 lola 的 turtle，那么 ...</p>
+<p>移动<br>
+lola.forward(n) 告诉 turtle 向前移动 n 个像素。 lola.back(n) 告诉 turtle 向后移动 n 个像素。 n 还可以是负数，这样动作就会颠倒过来。 lola.forward(100) 和 lola.back(-100) 执行的操作一样。 lola.speed(s) 设置 turtle 的速度。速度 0 最快。</p>
+<p>转向<br>
+lola.right(a) 告诉 turtle 按照 a 角度右转。 lola.left(a) 告诉 turtle 按照 a 角度左转。 a 也可以是负数，这样转向就会颠倒过来。 lola.left(-45) 和 lola.right(45) 执行的操作一样。<br>
+turtle 从画布的中心开始，指向你的右侧。 转向始终相对于 turtle 当前的朝向。</p>
+<p>绘制<br>
+lola.penup() 告诉 turtle 抬笔，因此在移动时不会绘制图形。 lola.pendown() 告诉 turtle 再次落笔，因此会绘制图形。 lola.width(n) 将 turtle 的线条粗细更改为 n 个像素。 lola.color(colorname) 将 turtle 的颜色更改为特定名称的颜色。 颜色用字符串命名，例如 &quot;red&quot;、&quot;white&quot; 或 &quot;chartreuse&quot;。 你还可以使用十六进制颜色，例如 &quot;#ff0000&quot;、&quot;#ffffff&quot; 或 &quot;#7fff00&quot;。<br>
+turtle 一开始笔是落下的，颜色为 &quot;black&quot;，粗细为 1 个像素。</p>
+<p>隐藏和显示<br>
+lola.hideturtle() 告诉 turtle 隐藏自己，因此只显示绘制的图形。 lola.showturtle() 告诉 turtle 取消隐藏自己。</p>
+<p>函数定义：<br>
+def 函数名（形参）</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Hello Gridea]]></title>
         <id>https://randomassortment.github.io/post/hello-gridea</id>
