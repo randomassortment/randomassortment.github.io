@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://randomassortment.github.io</id>
     <title>Gridea</title>
-    <updated>2020-02-26T04:50:59.939Z</updated>
+    <updated>2020-02-26T05:18:45.401Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://randomassortment.github.io"/>
     <link rel="self" href="https://randomassortment.github.io/atom.xml"/>
@@ -11,7 +11,17 @@
     <icon>https://randomassortment.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, Gridea</rights>
     <entry>
-        <title type="html"><![CDATA[python面试准备]]></title>
+        <title type="html"><![CDATA[python面试准备（二）]]></title>
+        <id>https://randomassortment.github.io/post/python-mian-shi-zhun-bei-er</id>
+        <link href="https://randomassortment.github.io/post/python-mian-shi-zhun-bei-er">
+        </link>
+        <updated>2020-02-26T05:04:30.000Z</updated>
+        <content type="html"><![CDATA[<p>1、Python中的列表和元组有什么区别？<br>
+<img src="https://randomassortment.github.io/post-images/1582694313170.jpg" alt="" loading="lazy"></p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[python面试准备（一）]]></title>
         <id>https://randomassortment.github.io/post/python-mian-shi-zhun-bei</id>
         <link href="https://randomassortment.github.io/post/python-mian-shi-zhun-bei">
         </link>
