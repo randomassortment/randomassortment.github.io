@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://randomassortment.github.io</id>
     <title>Gridea</title>
-    <updated>2020-02-26T05:18:45.401Z</updated>
+    <updated>2020-02-26T05:33:38.353Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://randomassortment.github.io"/>
     <link rel="self" href="https://randomassortment.github.io/atom.xml"/>
@@ -16,8 +16,60 @@
         <link href="https://randomassortment.github.io/post/python-mian-shi-zhun-bei-er">
         </link>
         <updated>2020-02-26T05:04:30.000Z</updated>
-        <content type="html"><![CDATA[<p>1、Python中的列表和元组有什么区别？<br>
-<img src="https://randomassortment.github.io/post-images/1582694313170.jpg" alt="" loading="lazy"></p>
+        <content type="html"><![CDATA[<p>2、Python的主要功能是什么？<br>
+Python是一种解释型语言。与C语言等语言不同，Python不需要在运行之前进行编译。<br>
+Python是动态语言，当您声明变量或类似变量时，您不需要声明变量的类型。<br>
+Python适合面向对象的编程，因为它允许类的定义以及组合和继承。Python没有访问说明（如C ++的public，private）。<br>
+在Python中，函数是第一类对象。它们可以分配给变量。类也是第一类对象<br>
+编写Python代码很快，但运行比较慢。Python允许基于C的扩展，例如numpy函数库。<br>
+Python可用于许多领域。Web应用程序开发，自动化，数学建模，大数据应用程序等等。它也经常被用作“胶水”代码。</p>
+<p>3、Python是通用编程语言吗？<br>
+Python能够编写脚本，但从一般意义上讲，它被认为是一种通用编程语言。</p>
+<p>4、Python是如何解释语言的？<br>
+Python在运行之前不需要对程序进行解释。因此，Python是一种解释型语言。</p>
+<p>5、什么是pep？<br>
+PEP代表Python Enhancement Proposal。它是一组规则，指定如何格式化Python代码以获得最大可读性。</p>
+<p>6、如何在Python中管理内存？<br>
+python中的内存管理由Python私有堆空间管理。所有Python对象和数据结构都位于私有堆中。程序员无权访问此私有堆。python解释器负责处理这个问题。<br>
+Python对象的堆空间分配由Python的内存管理器完成。核心API提供了一些程序员编写代码的工具。<br>
+Python还有一个内置的垃圾收集器，它可以回收所有未使用的内存，并使其可用于堆空间。</p>
+<p>7、Python中的命名空间是什么？<br>
+命名空间是一个命名系统，用于确保名称是唯一性，以避免命名冲突。</p>
+<p>8、什么是PYTHONPATH？<br>
+它是导入模块时使用的环境变量。每当导入模块时，也会查找PYTHONPATH以检查各个目录中是否存在导入的模块。解释器使用它来确定要加载的模块。</p>
+<p>9、什么是python模块？Python中有哪些常用的内置模块？<br>
+Python模块是包含Python代码的.py文件。此代码可以是函数类或变量。一些常用的内置模块包括：sys、math、random、data time、JSON。</p>
+<p>10、Python中的局部变量和全局变量是什么？<br>
+全局变量：在函数外或全局空间中声明的变量称为全局变量。这些变量可以由程序中的任何函数访问。<br>
+局部变量：在函数内声明的任何变量都称为局部变量。此变量存在于局部空间中，而不是全局空间中。</p>
+<p>11、python是否区分大小写？<br>
+是。Python是一种区分大小写的语言。</p>
+<p>12、什么是Python中的类型转换？<br>
+类型转换是指将一种数据类型转换为另一种数据类型<br>
+int（）  - 将任何数据类型转换为整数类型<br>
+float（）  - 将任何数据类型转换为float类型<br>
+ord（）  - 将字符转换为整数<br>
+hex（） - 将整数转换为十六进制<br>
+oct（）  - 将整数转换为八进制<br>
+tuple（） - 此函数用于转换为元组。<br>
+set（） - 此函数在转换为set后返回类型。<br>
+list（） - 此函数用于将任何数据类型转换为列表类型。<br>
+dict（） - 此函数用于将顺序元组（键，值）转换为字典。<br>
+str（） - 用于将整数转换为字符串。<br>
+complex（real，imag）  - 此函数将实数转换为复数（实数，图像）数。</p>
+<p>14、python中是否需要缩进？<br>
+缩进是Python必需的。它指定了一个代码块。循环，类，函数等中的所有代码都在缩进块中指定。通常使用四个空格字符来完成。如果您的代码没有必要缩进，它将无法准确执行并且也会抛出错误。</p>
+<p>15、Python数组和列表有什么区别？<br>
+Python中的数组和列表具有相同的存储数据方式。但是，数组只能包含单个数据类型元素，而列表可以包含任何数据类型元素。</p>
+<p>16、Python中的函数是什么？<br>
+函数是一个代码块，只有在被调用时才会执行。要在Python中定义函数，需要使用def关键字。</p>
+<p>17、什么是__init__?<br>
+__init__是Python中的方法或者结构。在创建类的新对象/实例时，将自动调用此方法来分配内存。所有类都有__init__方法。</p>
+<p>18、什么是lambda函数？<br>
+lambda函数也叫匿名函数，该函数可以包含任意数量的参数，但只能有一个执行操作的语句。</p>
+<p>19、Python中的self是什么？<br>
+self是类的实例或对象。在Python中，self包含在第一个参数中。但是，Java中的情况并非如此，它是可选的。它有助于区分具有局部变量的类的方法和属性。init方法中的self变量引用新创建的对象，而在其他方法中，它引用其方法被调用的对象。</p>
+<p>20、区分break，continue和pass？</p>
 ]]></content>
     </entry>
     <entry>
