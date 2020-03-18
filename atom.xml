@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://randomassortment.github.io</id>
     <title>Gridea</title>
-    <updated>2020-02-26T05:33:38.353Z</updated>
+    <updated>2020-03-18T08:48:03.493Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://randomassortment.github.io"/>
     <link rel="self" href="https://randomassortment.github.io/atom.xml"/>
@@ -10,6 +10,245 @@
     <logo>https://randomassortment.github.io/images/avatar.png</logo>
     <icon>https://randomassortment.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, Gridea</rights>
+    <entry>
+        <title type="html"><![CDATA[西安中软国际python笔试]]></title>
+        <id>https://randomassortment.github.io/post/xi-an-zhong-ruan-guo-ji-python-bi-shi</id>
+        <link href="https://randomassortment.github.io/post/xi-an-zhong-ruan-guo-ji-python-bi-shi">
+        </link>
+        <updated>2020-03-18T03:06:55.000Z</updated>
+        <content type="html"><![CDATA[<p>1.列出5个python标准库并简单介绍其内容<br>
+datetime：为日期和时间的处理提供了简单和复杂的方法。<br>
+re：为高级字符串处理提供了正则表达式工具。<br>
+random：提供了生成随机数的工具。<br>
+math：为浮点运算提供了对底层C函数库的访问。<br>
+os：提供了许多与操作系统相关联的函数。</p>
+<p>2.python内建数据类型有哪些<br>
+整型——int；布尔型——bool；字符串——str；列表——list；元组——tuple；字典——dict<br>
+3.请写出下列程序的运行结果 (函数参数传递)</p>
+<ol start="4">
+<li>解释下列代码L, G的数据结构，并解释G相对于F有何优势 (迭代器和生成器)</li>
+</ol>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>L = [x<em>x for x in range(10)]<br>
+g = (x</em>x for x in range(10))<br>
+L是列表，G是生成器；<br>
+生成器的优点是可以节约内存，只会记录当前位置与下一个位置，生成器的本质仍然是迭代器</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>5.__new__和__init__的区别与联系<br>
+new负责对象的创建，而init负责对象的初始化；<br>
+new创建对象时调用，会返回当前对象的一个实例；<br>
+init创建完对象后调用，对当前对象的一些实例初始化，无返回值。<br>
+另外，在类中，如果new和init同时存在，会优先调用new；<br>
+如果new返回一个对象的实例，会隐式调用init；<br>
+new方法会返回所构造的对象，init则不会，init无返回值。</p>
+<ol start="6">
+<li>写出下列程序运行结果（深拷贝和浅拷贝）<br>
+import copy<br>
+a = [1, 2, 3, 4, ['a', 'b']]  #原始对象</li>
+</ol>
+<p>b = a  #赋值，传对象的引用<br>
+c = copy.copy(a)  #对象拷贝，浅拷贝<br>
+d = copy.deepcopy(a)  #对象拷贝，深拷贝</p>
+<p>a.append(5)  #修改对象a<br>
+a[4].append('c')  #修改对象a中的['a', 'b']数组对象</p>
+<p>print 'a = ', a<br>
+print 'b = ', b<br>
+print 'c = ', c<br>
+print 'd = ', d<br>
+输出结果：<br>
+a =  [1, 2, 3, 4, ['a', 'b', 'c'], 5]<br>
+b =  [1, 2, 3, 4, ['a', 'b', 'c'], 5]<br>
+c =  [1, 2, 3, 4, ['a', 'b', 'c']]<br>
+d =  [1, 2, 3, 4, ['a', 'b']]</p>
+<p>7.用python实现快排<br>
+def quick_sort(num_list):<br>
+length = len(num_list)<br>
+if length &gt; 1:<br>
+key = num_list[0]     # 取列表第一个元素为关键值<br>
+left_list = []        # 用来保存比key小的数值<br>
+right_list = []       # 用来保存比key大的数值<br>
+num_list.remove(key)  # 将key从列表中移除<br>
+for i in range(length-1):<br>
+if num_list[i] &lt; key:<br>
+left_list.append(num_list[i])<br>
+elif num_list[i] &gt; key:<br>
+right_list.append(num_list[i])<br>
+return quick_sort(left_list) + [key] + quick_sort(right_list)  # 递归过程<br>
+else:<br>
+return num_list<br>
+def main():<br>
+num_input_str = input('输入数字，用空格隔开：')<br>
+num_input_str_list = num_input_str.split(' ')<br>
+num_input_list = [float(i) for i in num_input_str_list]  # 将列表内的元素由str类转变为float类<br>
+print(num_input_list)<br>
+print(quick_sort(num_input_list))<br>
+if <strong>name</strong> == '<strong>main</strong>':<br>
+main()<br>
+8.用python实现二分查找<br>
+def binary_search(list, item):<br>
+left = 0  # 表示左边界索引<br>
+right = len(list) - 1  # 表示有边界索引<br>
+while left &lt;= right:<br>
+mid = int((left + right) / 2)  # 表示中间值的索引<br>
+guess = list[mid]<br>
+if guess == item:<br>
+return mid;  # 如果中间值等于目标值,返回目标值的索引<br>
+if guess &gt; item:<br>
+right = mid - 1<br>
+else:<br>
+left = mid + 1<br>
+return None</p>
+<ol start="9">
+<li>正则匹配不是以4和7结尾的手机号<br>
+import re<br>
+a = input()<br>
+ret = re.match(&quot;1\d{9}[^47]&quot;, a)<br>
+if ret:<br>
+print(ret.group())<br>
+else:<br>
+print(&quot;%s 不是想要的手机号&quot; % a)</li>
+</ol>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[字节跳动火山视频 测试工程师]]></title>
+        <id>https://randomassortment.github.io/post/zi-jie-tiao-dong-huo-shan-shi-pin-ce-shi-gong-cheng-shi</id>
+        <link href="https://randomassortment.github.io/post/zi-jie-tiao-dong-huo-shan-shi-pin-ce-shi-gong-cheng-shi">
+        </link>
+        <updated>2020-03-18T03:05:27.000Z</updated>
+        <content type="html"><![CDATA[<p>自我介绍<br>
+项目经历  怎样用算法实现图片的分类<br>
+一、进程和线程的区别</p>
+<p>二、python元组和列表，字典的用法，还有区别</p>
+<p>三、测试用例</p>
+<p>四、微信点赞的测试<br>
+1.是否可以正常点赞和取消；<br>
+2.点赞的人是否在可见分组里；<br>
+3.点赞状态是否能即时更新显示；<br>
+4.点赞状态，共同好友是否可见；<br>
+5.不同手机，系统显示界面如何备注；<br>
+6.性能检测，网速快慢对其影响；<br>
+7.点赞显示的是否正确，一行几个；<br>
+8.点赞是否按时间进行排序，头像对应的是否正确；<br>
+9.是否能在消息列表中显示点赞人的昵称、<br>
+10.可扩展性测试，点赞后是否能发表评论；<br>
+11.是否在未登录时可查看被点赞的信息。</p>
+<p>五、手写代码  给一串字符输出第一个不重复的字符</p>
+<p>六计算机的五层或七层模型<br>
+五层：物理层，数据链路层，网络层，运输层，应用层<br>
+七层：物理层，数据链路层，网络层，运输层，会话层，表示层，应用层</p>
+<p>七、arp tcp都是哪一层<br>
+1，应用层(application layer)：是体系结构中的最高。直接为用户的应用进程（例如电子邮件、文件传输和终端仿真）提供服务。<br>
+在因特网中的应用层协议很多，如支持万维网应用的HTTP协议，支持电子邮件的SMTP协议，支持文件传送的FTP协议，DNS，POP3，SNMP，Telnet等等。<br>
+2，运输层(transport layer)：负责向两个主机中进程之间的通信提供服务。由于一个主机可同时运行多个进程，因此运输层有复用和分用的功能<br>
+复用，就是多个应用层进程可同时使用下面运输层的服务。<br>
+分用，就是把收到的信息分别交付给上面应用层中相应的进程。<br>
+运输层主要使用以下两种协议：<br>
+(1) 传输控制协议TCP(Transmission Control Protocol)：面向连接的，数据传输的单位是报文段，能够提供可靠的交付。<br>
+(2) 用户数据包协议UDP(User Datagram Protocol)：无连接的，数据传输的单位是用户数据报，不保证提供可靠的交付，只能提供“尽最大努力交付”。</p>
+<p>八、tcp为什么要进行第三次握手<br>
+第一次握手：建立连接时，客户端发送syn包（syn=j）到服务器，并进入SYN_SENT状态，等待服务器确认；SYN：同步序列编号（Synchronize Sequence Numbers）。</p>
+<p>第二次握手：服务器收到syn包，必须确认客户的SYN（ack=j+1），同时自己也发送一个SYN包（syn=k），即SYN+ACK包，此时服务器进入SYN_RECV状态；</p>
+<p>第三次握手：客户端收到服务器的SYN+ACK包，向服务器发送确认包ACK(ack=k+1），此包发送完毕，客户端和服务器进入ESTABLISHED（TCP连接成功）状态，完成三次握手。</p>
+<p>为什么不是两次：<br>
+在服务端对客户端的请求进行回应(第二次握手)后，就会理所当然的认为连接已建立，而如果客户端并没有收到服务端的回应呢？此时，客户端仍认为连接未建立，服务端会对已建立的连接保存必要的资源，如果大量的这种情况，服务端会崩溃。</p>
+<p>九、arp协议是什么？<br>
+是根据IP地址获取物理地址的一个TCP/IP协议</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[数据结构操作系统计网面试题]]></title>
+        <id>https://randomassortment.github.io/post/shu-ju-jie-gou-cao-zuo-xi-tong-ji-wang-mian-shi-ti</id>
+        <link href="https://randomassortment.github.io/post/shu-ju-jie-gou-cao-zuo-xi-tong-ji-wang-mian-shi-ti">
+        </link>
+        <updated>2020-03-06T11:42:44.000Z</updated>
+        <content type="html"><![CDATA[<p>数据结构：<br>
+BST的操作</p>
+<p>链表相关</p>
+<p>堆的操作</p>
+<p>跳表原理</p>
+<p>红黑树原理</p>
+<p>哈希表原理（这里有一个热点问题，就是比如我分布式情况下对某个值频繁操作，直接给数据结构加锁影响太大，应该怎么处理）</p>
+<p>哈希表的拉链法、开放地址法</p>
+<p>B/B 树的原理，结构，优势，对比</p>
+<p>乐观锁悲观锁</p>
+<p>MySQL：<br>
+索引原理，参考B 树相关</p>
+<p>SQL解析顺序</p>
+<p>联合索引相关</p>
+<p>Innodb和MyISAM对比</p>
+<p>锁的级别</p>
+<p>各种sql语句等等</p>
+<p>操作系统：<br>
+线程和进程</p>
+<p>协程和进程/线程</p>
+<p>进程/线程/协程间通信</p>
+<p>进程的几个状态</p>
+<p>自旋锁和互斥锁</p>
+<p>内存缺页情况</p>
+<p>Linux的32位机内存地址空间</p>
+<p>PV操作</p>
+<p>内核态和用户态</p>
+<p>死锁检测</p>
+<p>大端小端，网络字节序，x86</p>
+<p>Linux排查问题</p>
+<p>gcc编译相关</p>
+<p>计算机网络：</p>
+<p>tcp三次握手四次挥手</p>
+<p>为什么三次握手/四次挥手</p>
+<p>挥手中的等待2msl</p>
+<p>tcp状态自动机</p>
+<p>tcp拥塞控制，流量控制</p>
+<p>tcp的流式传输</p>
+<p>tcp的可靠性原理</p>
+<p>udp和tcp区别</p>
+<p>udp是否可靠</p>
+<p>udp如何做可靠传输</p>
+<p>http的状态码</p>
+<p>网络模型</p>
+<p>TIME_WAIT和TIME_CLOSE相关</p>
+<p>长连接短连接</p>
+<p>epoll/select原理</p>
+<p>et/lt区别，原理</p>
+<p>socket相关</p>
+<p>请求到页面渲染的过程</p>
+<p>http/https区别</p>
+<p>常用加密算法及原理</p>
+<p>分布式设计：<br>
+Redis相关操作</p>
+<p>MySQL主从</p>
+<p>MQ有哪些，相关操作</p>
+<p>Mongodb相关操作</p>
+<p>反向***，nginx</p>
+<p>负载均衡</p>
+<p>一致性哈希</p>
+<p>高并发及各种场景下tcp/udp选择，理由</p>
+<p>语言相关的框架</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[面试准备]]></title>
+        <id>https://randomassortment.github.io/post/mian-shi-zhun-bei</id>
+        <link href="https://randomassortment.github.io/post/mian-shi-zhun-bei">
+        </link>
+        <updated>2020-03-06T11:14:58.000Z</updated>
+        <content type="html"><![CDATA[<p>1、闭包及装饰器作用【实际开发使用】？</p>
+<p>闭包：就是在一个外函数中定义了一个内函数，内函数里运用了外函数的临时变量，并且 外函数的返回值是内函数的引用。</p>
+<p>装饰器(本质就是闭包)：主要作用为已经存在的对象添加额外的功能，例如日志记录、数据校验等。</p>
+<p>2、深拷贝及浅拷贝？</p>
+<p>深拷贝使用deepcopy()函数完成（deepcopy的本质是递归 copy）</p>
+<p>浅拷贝有三种形式:</p>
+<p>切片操作:b = a[:]或者b = [x for x in a];</p>
+<p>工厂函数：b = list(a);</p>
+<p>copy函数：b = copy.copy(a)</p>
+<p>浅拷贝和深拷贝的区别是：浅拷贝只是将原对象在内存中引用地址拷贝</p>
+<p>而深拷贝是将这个对象的所有内容拷贝过来了，包括值与内存地址</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[python面试准备（二）]]></title>
         <id>https://randomassortment.github.io/post/python-mian-shi-zhun-bei-er</id>
@@ -69,7 +308,6 @@ __init__是Python中的方法或者结构。在创建类的新对象/实例时�
 lambda函数也叫匿名函数，该函数可以包含任意数量的参数，但只能有一个执行操作的语句。</p>
 <p>19、Python中的self是什么？<br>
 self是类的实例或对象。在Python中，self包含在第一个参数中。但是，Java中的情况并非如此，它是可选的。它有助于区分具有局部变量的类的方法和属性。init方法中的self变量引用新创建的对象，而在其他方法中，它引用其方法被调用的对象。</p>
-<p>20、区分break，continue和pass？</p>
 ]]></content>
     </entry>
     <entry>

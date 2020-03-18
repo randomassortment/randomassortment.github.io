@@ -1,0 +1,264 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>西安中软国际python笔试 | Gridea</title>
+<link rel="shortcut icon" href="https://randomassortment.github.io/favicon.ico?v=1584521277617">
+<link href="https://cdn.remixicon.com/releases/v2.1.0/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://randomassortment.github.io/styles/main.css">
+<link rel="alternate" type="application/atom+xml" title="西安中软国际python笔试 | Gridea - Atom Feed" href="https://randomassortment.github.io/atom.xml">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
+
+
+
+    <meta name="description" content="1.列出5个python标准库并简单介绍其内容
+datetime：为日期和时间的处理提供了简单和复杂的方法。
+re：为高级字符串处理提供了正则表达式工具。
+random：提供了生成随机数的工具。
+math：为浮点运算提供了对底层C函数库的访..." />
+    <meta name="keywords" content="" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+    <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+  </head>
+  <body>
+    <div class="main">
+      <div class="main-content">
+        <div class="site-header">
+  <a href="https://randomassortment.github.io">
+  <img class="avatar" src="https://randomassortment.github.io/images/avatar.png?v=1584521277617" alt="">
+  </a>
+  <h1 class="site-title">
+    Gridea
+  </h1>
+  <p class="site-description">
+    温故而知新
+  </p>
+  <div class="menu-container">
+    
+      
+        <a href="/" class="menu">
+          首页
+        </a>
+      
+    
+      
+        <a href="/archives" class="menu">
+          归档
+        </a>
+      
+    
+      
+        <a href="/tags" class="menu">
+          标签
+        </a>
+      
+    
+      
+        <a href="/post/about" class="menu">
+          关于
+        </a>
+      
+    
+  </div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+        <div class="post-detail">
+          <article class="post">
+            <h2 class="post-title">
+              西安中软国际python笔试
+            </h2>
+            <div class="post-info">
+              <span>
+                2020-03-18
+              </span>
+              <span>
+                4 min read
+              </span>
+              
+            </div>
+            
+            <div class="post-content-wrapper">
+              <div class="post-content">
+                <p>1.列出5个python标准库并简单介绍其内容<br>
+datetime：为日期和时间的处理提供了简单和复杂的方法。<br>
+re：为高级字符串处理提供了正则表达式工具。<br>
+random：提供了生成随机数的工具。<br>
+math：为浮点运算提供了对底层C函数库的访问。<br>
+os：提供了许多与操作系统相关联的函数。</p>
+<p>2.python内建数据类型有哪些<br>
+整型——int；布尔型——bool；字符串——str；列表——list；元组——tuple；字典——dict<br>
+3.请写出下列程序的运行结果 (函数参数传递)</p>
+<ol start="4">
+<li>解释下列代码L, G的数据结构，并解释G相对于F有何优势 (迭代器和生成器)</li>
+</ol>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>L = [x<em>x for x in range(10)]<br>
+g = (x</em>x for x in range(10))<br>
+L是列表，G是生成器；<br>
+生成器的优点是可以节约内存，只会记录当前位置与下一个位置，生成器的本质仍然是迭代器</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>5.__new__和__init__的区别与联系<br>
+new负责对象的创建，而init负责对象的初始化；<br>
+new创建对象时调用，会返回当前对象的一个实例；<br>
+init创建完对象后调用，对当前对象的一些实例初始化，无返回值。<br>
+另外，在类中，如果new和init同时存在，会优先调用new；<br>
+如果new返回一个对象的实例，会隐式调用init；<br>
+new方法会返回所构造的对象，init则不会，init无返回值。</p>
+<ol start="6">
+<li>写出下列程序运行结果（深拷贝和浅拷贝）<br>
+import copy<br>
+a = [1, 2, 3, 4, ['a', 'b']]  #原始对象</li>
+</ol>
+<p>b = a  #赋值，传对象的引用<br>
+c = copy.copy(a)  #对象拷贝，浅拷贝<br>
+d = copy.deepcopy(a)  #对象拷贝，深拷贝</p>
+<p>a.append(5)  #修改对象a<br>
+a[4].append('c')  #修改对象a中的['a', 'b']数组对象</p>
+<p>print 'a = ', a<br>
+print 'b = ', b<br>
+print 'c = ', c<br>
+print 'd = ', d<br>
+输出结果：<br>
+a =  [1, 2, 3, 4, ['a', 'b', 'c'], 5]<br>
+b =  [1, 2, 3, 4, ['a', 'b', 'c'], 5]<br>
+c =  [1, 2, 3, 4, ['a', 'b', 'c']]<br>
+d =  [1, 2, 3, 4, ['a', 'b']]</p>
+<p>7.用python实现快排<br>
+def quick_sort(num_list):<br>
+length = len(num_list)<br>
+if length &gt; 1:<br>
+key = num_list[0]     # 取列表第一个元素为关键值<br>
+left_list = []        # 用来保存比key小的数值<br>
+right_list = []       # 用来保存比key大的数值<br>
+num_list.remove(key)  # 将key从列表中移除<br>
+for i in range(length-1):<br>
+if num_list[i] &lt; key:<br>
+left_list.append(num_list[i])<br>
+elif num_list[i] &gt; key:<br>
+right_list.append(num_list[i])<br>
+return quick_sort(left_list) + [key] + quick_sort(right_list)  # 递归过程<br>
+else:<br>
+return num_list<br>
+def main():<br>
+num_input_str = input('输入数字，用空格隔开：')<br>
+num_input_str_list = num_input_str.split(' ')<br>
+num_input_list = [float(i) for i in num_input_str_list]  # 将列表内的元素由str类转变为float类<br>
+print(num_input_list)<br>
+print(quick_sort(num_input_list))<br>
+if <strong>name</strong> == '<strong>main</strong>':<br>
+main()<br>
+8.用python实现二分查找<br>
+def binary_search(list, item):<br>
+left = 0  # 表示左边界索引<br>
+right = len(list) - 1  # 表示有边界索引<br>
+while left &lt;= right:<br>
+mid = int((left + right) / 2)  # 表示中间值的索引<br>
+guess = list[mid]<br>
+if guess == item:<br>
+return mid;  # 如果中间值等于目标值,返回目标值的索引<br>
+if guess &gt; item:<br>
+right = mid - 1<br>
+else:<br>
+left = mid + 1<br>
+return None</p>
+<ol start="9">
+<li>正则匹配不是以4和7结尾的手机号<br>
+import re<br>
+a = input()<br>
+ret = re.match(&quot;1\d{9}[^47]&quot;, a)<br>
+if ret:<br>
+print(ret.group())<br>
+else:<br>
+print(&quot;%s 不是想要的手机号&quot; % a)</li>
+</ol>
+
+              </div>
+              <div class="toc-container">
+                
+              </div>
+            </div>
+          </article>
+        </div>
+
+        
+          <div class="next-post">
+            <div class="next">下一篇</div>
+            <a href="https://randomassortment.github.io/post/zi-jie-tiao-dong-huo-shan-shi-pin-ce-shi-gong-cheng-shi">
+              <h3 class="post-title">
+                字节跳动火山视频 测试工程师
+              </h3>
+            </a>
+          </div>
+        
+
+        
+
+        <div class="site-footer">
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
+  <a class="rss" href="https://randomassortment.github.io/atom.xml" target="_blank">
+    <i class="ri-rss-line"></i> RSS
+  </a>
+</div>
+
+      </div>
+    </div>
+
+    <script>
+      hljs.initHighlightingOnLoad()
+
+      let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+
+      // This should probably be throttled.
+      // Especially because it triggers during smooth scrolling.
+      // https://lodash.com/docs/4.17.10#throttle
+      // You could do like...
+      // window.addEventListener("scroll", () => {
+      //    _.throttle(doThatStuff, 100);
+      // });
+      // Only not doing it here to keep this Pen dependency-free.
+
+      window.addEventListener("scroll", event => {
+        let fromTop = window.scrollY;
+
+        mainNavLinks.forEach((link, index) => {
+          let section = document.getElementById(decodeURI(link.hash).substring(1));
+          let nextSection = null
+          if (mainNavLinks[index + 1]) {
+            nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+          }
+          if (section.offsetTop <= fromTop) {
+            if (nextSection) {
+              if (nextSection.offsetTop > fromTop) {
+                link.classList.add("current");
+              } else {
+                link.classList.remove("current");    
+              }
+            } else {
+              link.classList.add("current");
+            }
+          } else {
+            link.classList.remove("current");
+          }
+        });
+      });
+
+    </script>
+  </body>
+</html>
